@@ -1,0 +1,23 @@
+{
+  "name": "futbolinapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fermin Rodriguez",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "joi": "^17.12.0",
+    "mysql2": "^3.7.1",
+    "nodemon": "^3.0.3",
+    "promise-mysql": "^5.2.0",
+    "sequelize": "^6.35.2",
+    "uuid": "^9.0.1"
+  }
+}
