@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import exQuery from "../config/db.js";
 import { schemasEmail } from "../config/schemas.js";
 import { getSystemConfig } from "../models/systemconfig.model.js";
-import { newTeam } from "./team.controller.js";
+import teamController from "./team.controller.js";
 
 export const newGente = async (email) => {
   const { error } = schemasEmail.email.validate(email);
@@ -19,7 +19,7 @@ export const newGente = async (email) => {
   }')`;
 
   try {
-    await newTeam(idGente, email);
+    await teamController.newTeam(idGente, email);
   } catch (error) {
     throw error;
   }

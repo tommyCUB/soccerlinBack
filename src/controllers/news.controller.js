@@ -9,7 +9,7 @@ export const getNews = async (req, res) => {
   if (error) {
     throw error;
   }
-  const query = `SELECT idNews, message, utcCreated, seen, type FROM news as n  inner join gente as g  WHERE n.idGente=g.idGente and  g.email = '${email}' limit 25`;
+  const query = `SELECT idNews, message, utcCreated, seen, type FROM news as n  inner join gente as g  WHERE n.idGente=g.idGente and  g.email = '${email}' order by utcCreated DESC limit 25`;
   const datos = await exQuery(query);
 
   res.json(datos);
